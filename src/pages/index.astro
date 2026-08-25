@@ -1,0 +1,1207 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import GlowBackground from '../components/GlowBackground.astro';
+import Button from '../components/Button.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Finovate.AI - Intelligent Finance.">
+  <GlowBackground />
+  <Navbar />
+  
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero container">
+      <div class="hero-badge">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+          <circle cx="6" cy="6" r="3" fill="#3385ff"/>
+          <circle cx="6" cy="6" r="5" stroke="#3385ff" stroke-width="1" stroke-dasharray="2 2"/>
+        </svg>
+        AI-Powered Finance Automation
+      </div>
+      <h1 class="hero-title">
+        We Transform Finance Teams Into
+        <span class="text-gradient">AI-Native</span>
+    Market Leaders
+  </h1>
+      <p class="hero-subtitle">
+        Custom AI agents that process invoices, reconcile accounts, and automate workflows so your team stops drowning in manual work.
+      </p>
+      <div class="hero-ctas">
+        <Button href="/contact" variant="primary" size="lg">
+          Book a Free Demo
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="margin-left: 4px;">
+            <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </Button>
+
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">10M+</span>
+          <span class="hero-stat-label">AI Tasks Processed</span>
+        </div>
+        <div class="hero-stat-dot"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">99%+</span>
+          <span class="hero-stat-label">Extraction Accuracy</span>
+        </div>
+        <div class="hero-stat-dot"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">10&times;</span>
+          <span class="hero-stat-label">Faster Reconciliation</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- GROWTH CURVE SECTION -->
+    <section class="growth-section container">
+      <div class="growth-inner">
+        <div class="growth-content">
+          <h2 class="growth-title">We Transform Organizations Into <span class="text-gradient">AI-Native</span> Market Leaders</h2>
+          <a href="/contact" class="growth-btn">Learn how</a>
+        </div>
+        <div class="growth-visual">
+          <div class="growth-grid"></div>
+          <svg class="growth-svg" viewBox="0 0 500 320" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="curveGlow" x1="0" y1="1" x2="1" y2="0">
+                <stop offset="0%" stop-color="rgba(51, 133, 255, 0)" />
+                <stop offset="50%" stop-color="rgba(51, 133, 255, 0.3)" />
+                <stop offset="100%" stop-color="rgba(51, 133, 255, 0)" />
+              </linearGradient>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="4" result="blur"/>
+                <feMerge>
+                  <feMergeNode in="blur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+            <path class="growth-line" d="M 40 280 Q 150 280 200 220 T 300 140 T 460 60" fill="none" stroke="url(#curveGlow)" stroke-width="12" stroke-linecap="round" opacity="0.3"/>
+            <path class="growth-line" d="M 40 280 Q 150 280 200 220 T 300 140 T 460 60" fill="none" stroke="#3385ff" stroke-width="2.5" stroke-linecap="round" filter="url(#glow)"/>
+            <circle class="growth-node node-1" cx="130" cy="252" r="5" fill="#fff" stroke="#3385ff" stroke-width="2" filter="url(#glow)"/>
+            <circle class="growth-node node-2" cx="230" cy="190" r="5" fill="#fff" stroke="#3385ff" stroke-width="2" filter="url(#glow)"/>
+            <circle class="growth-node node-3" cx="340" cy="115" r="5" fill="#fff" stroke="#3385ff" stroke-width="2" filter="url(#glow)"/>
+            <circle class="growth-node node-4" cx="440" cy="60" r="5" fill="#fff" stroke="#3385ff" stroke-width="2" filter="url(#glow)"/>
+          </svg>
+          <div class="growth-labels">
+            <div class="growth-label label-1">
+              <span class="gl-label">Manual Operations</span>
+            </div>
+            <div class="growth-label label-2">
+              <span class="gl-label">AI-Accelerated Teams</span>
+            </div>
+            <div class="growth-label label-3">
+              <span class="gl-label">AI-Enabled Ops</span>
+            </div>
+            <div class="growth-label label-4">
+              <span class="gl-label">Fully AI-Native</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DASHBOARD MOCKUP SECTION -->
+    <section class="dashboard-showcase container">
+      <div class="dashboard-card glass-panel">
+        <div class="dashboard-header">
+          <div class="dashboard-dots">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <div class="dashboard-tabs">
+            <span class="tab active">Overview</span>
+            <span class="tab">AR Aging</span>
+            <span class="tab">Invoices</span>
+            <span class="tab">Reconciliation</span>
+          </div>
+          <div class="dashboard-status">Live</div>
+        </div>
+        <div class="dashboard-body">
+          <div class="dashboard-sidebar">
+            <div class="sidebar-item"><span class="sidebar-icon">&#9632;</span> Dashboard</div>
+            <div class="sidebar-item"><span class="sidebar-icon">&#9632;</span> Invoices</div>
+            <div class="sidebar-item active"><span class="sidebar-icon">&#9632;</span> AR</div>
+            <div class="sidebar-item"><span class="sidebar-icon">&#9632;</span> Reports</div>
+            <div class="sidebar-item"><span class="sidebar-icon">&#9632;</span> Settings</div>
+          </div>
+          <div class="dashboard-content">
+            <div class="dash-top-row">
+              <div class="dash-metric">
+                <span class="dash-metric-label">Total AR</span>
+                <span class="dash-metric-value">$2.4M</span>
+                <span class="dash-metric-change up">+12.3%</span>
+              </div>
+              <div class="dash-metric">
+                <span class="dash-metric-label">DSO</span>
+                <span class="dash-metric-value">34.2</span>
+                <span class="dash-metric-change down">-3.1d</span>
+              </div>
+              <div class="dash-metric">
+                <span class="dash-metric-label">AI Score</span>
+                <span class="dash-metric-value">96</span>
+                <div class="dash-metric-bar">
+                  <div class="dash-metric-fill"></div>
+                </div>
+              </div>
+            </div>
+            <div class="dash-table">
+              <div class="dash-table-row header">
+                <span>Client</span>
+                <span>Amount</span>
+                <span>Status</span>
+                <span>Due</span>
+              </div>
+              <div class="dash-table-row">
+                <span>Acme Corp</span>
+                <span>$124,500</span>
+                <span><span class="status-pill paid">Paid</span></span>
+                <span>Jun 10</span>
+              </div>
+              <div class="dash-table-row">
+                <span>GlobalTech</span>
+                <span>$89,200</span>
+                <span><span class="status-pill pending">Pending</span></span>
+                <span>Jun 14</span>
+              </div>
+              <div class="dash-table-row">
+                <span>Nova Systems</span>
+                <span>$245,000</span>
+                <span><span class="status-pill overdue">Overdue</span></span>
+                <span>May 28</span>
+              </div>
+              <div class="dash-table-row">
+                <span>Quantum Inc</span>
+                <span>$67,800</span>
+                <span><span class="status-pill paid">Paid</span></span>
+                <span>Jun 8</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENTO GRID SECTION -->
+    <section class="bento-section container">
+      <div class="section-label">
+        <span class="pill-label">CAPABILITIES</span>
+      </div>
+      <h2 class="section-title">End-to-End Finance Automation</h2>
+      <p class="section-desc">Every invoice, every reconciliation, handled by AI agents with full audit trails.</p>
+
+      <div class="bento-grid">
+        <!-- Card 1: Main Showcase - Accounts Payable -->
+        <div class="bento-card bento-card-1 glass-panel">
+          <div class="bento-card-content">
+            <div class="bento-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3385ff" stroke-width="1.5">
+                <rect x="3" y="7" width="18" height="14" rx="2"/>
+                <path d="M7 7V5a2 2 0 012-2h6a2 2 0 012 2v2"/>
+              </svg>
+            </div>
+            <h3>Accounts Payable</h3>
+            <p>Clear your entire AP backlog without manual data entry. Agents extract invoice data, run 3-way matching, assign GL codes, and route for approval automatically.</p>
+            <div class="bento-tags">
+              <span class="bento-tag">3-Way Matching</span>
+              <span class="bento-tag">GL Coding</span>
+              <span class="bento-tag">Auto-Approval</span>
+            </div>
+          </div>
+          <div class="bento-visual">
+            <div class="ap-flow">
+              <div class="ap-node">
+                <span class="ap-dot"></span>
+                <span class="ap-label">Invoice</span>
+              </div>
+              <div class="ap-line"></div>
+              <div class="ap-node active">
+                <span class="ap-dot"></span>
+                <span class="ap-label">Match</span>
+              </div>
+              <div class="ap-line"></div>
+              <div class="ap-node">
+                <span class="ap-dot"></span>
+                <span class="ap-label">Approve</span>
+              </div>
+              <div class="ap-line"></div>
+              <div class="ap-node">
+                <span class="ap-dot"></span>
+                <span class="ap-label">Pay</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Metrics -->
+        <div class="bento-card bento-card-2 glass-panel">
+          <div class="bento-card-content">
+            <div class="bento-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff6a2b" stroke-width="1.5">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+              </svg>
+            </div>
+            <h3>Proven Results</h3>
+          </div>
+          <div class="metrics-visual">
+            <div class="metric-ring">
+              <svg width="100" height="100" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="6"/>
+                <circle cx="50" cy="50" r="42" fill="none" stroke="#3385ff" stroke-width="6" stroke-dasharray="264" stroke-dashoffset="53" stroke-linecap="round" class="metric-ring-fill"/>
+              </svg>
+              <div class="metric-ring-text">
+                <span class="metric-ring-num">80%</span>
+                <span class="metric-ring-label">Manual Work Reduced</span>
+              </div>
+            </div>
+            <div class="metric-list">
+              <div class="metric-item">
+                <span class="metric-item-value">47%</span>
+                <span class="metric-item-label">Faster Processing</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-item-value">40+</span>
+                <span class="metric-item-label">Hours Saved / Week</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: AR Management -->
+        <div class="bento-card bento-card-3 glass-panel">
+          <div class="bento-card-content">
+            <div class="bento-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3385ff" stroke-width="1.5">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+              </svg>
+            </div>
+            <h3>Accounts Receivable</h3>
+            <p>Reduce DSO without chasing anyone. AI sends reminders, matches payments, and flags disputes.</p>
+            <div class="ar-timeline">
+              <div class="ar-event">
+                <span class="ar-day">D+7</span>
+                <span class="ar-action">Friendly Reminder</span>
+              </div>
+              <div class="ar-event">
+                <span class="ar-day">D+14</span>
+                <span class="ar-action">Follow-up</span>
+              </div>
+              <div class="ar-event">
+                <span class="ar-day">D+30</span>
+                <span class="ar-action">Escalate</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: RAG Assistant -->
+        <div class="bento-card bento-card-4 glass-panel">
+          <div class="bento-card-content">
+            <div class="bento-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3385ff" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/>
+                <path d="M12 17h.01"/>
+              </svg>
+            </div>
+            <h3>RAG AI Assistant</h3>
+            <p>Collects financial data from invoices, policies, and reports, then helps your team make faster, informed decisions with cited answers.</p>
+          </div>
+          <div class="workflow-visual">
+            <div class="wf-node">
+              <div class="wf-node-icon">&#9881;</div>
+              <span class="wf-node-label">Collect</span>
+            </div>
+            <div class="wf-connector">
+              <div class="wf-line"></div>
+              <div class="wf-particle"></div>
+            </div>
+            <div class="wf-node active">
+              <div class="wf-node-icon">&#9881;</div>
+              <span class="wf-node-label">Index</span>
+            </div>
+            <div class="wf-connector">
+              <div class="wf-line"></div>
+              <div class="wf-particle delay"></div>
+            </div>
+            <div class="wf-node">
+              <div class="wf-node-icon">&#9881;</div>
+              <span class="wf-node-label">Retrieve</span>
+            </div>
+            <div class="wf-connector">
+              <div class="wf-line"></div>
+              <div class="wf-particle"></div>
+            </div>
+            <div class="wf-node">
+              <div class="wf-node-icon">&#9881;</div>
+              <span class="wf-node-label">Decide</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section container">
+      <div class="cta-inner glass-panel">
+        <h2 class="cta-title">Ready to transform your finance operations?</h2>
+        <p class="cta-desc">A 15-minute demo of AI agents processing invoices, closing books, and flagging exceptions. Up and running in weeks.</p>
+        <div class="cta-buttons">
+          <Button href="/contact" variant="primary" size="lg">
+            Book a Free Demo
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="margin-left: 4px;">
+              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </Button>
+          <Button href="/architecture" variant="outline" size="lg">View Architecture</Button>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>
+
+<style>
+  /* ========== HERO ========== */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 200px;
+    padding-bottom: 6rem;
+    min-height: 85vh;
+    position: relative;
+    text-align: center;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 0.4rem 1rem;
+    border-radius: 9999px;
+    margin-bottom: 2rem;
+    letter-spacing: 0.3px;
+    animation: fadeUp 0.6s ease-out;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: -2px;
+    line-height: 1.1;
+    max-width: 900px;
+    margin-bottom: 1.5rem;
+    animation: fadeUp 0.6s ease-out 0.1s both;
+  }
+
+  .hero-title .text-gradient {
+    display: block;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 650px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+    animation: fadeUp 0.6s ease-out 0.2s both;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeUp 0.6s ease-out 0.3s both;
+  }
+
+  .hero-stats {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 4rem;
+    padding: 1.5rem 2.5rem;
+    border-radius: 9999px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    animation: fadeUp 0.6s ease-out 0.4s both;
+  }
+
+  .hero-stat {
+    text-align: center;
+  }
+
+  .hero-stat-num {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-main);
+    letter-spacing: -0.5px;
+  }
+
+  .hero-stat-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+  }
+
+  .hero-stat-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ========== GROWTH CURVE ========== */
+  .growth-section {
+    margin-bottom: 8rem;
+  }
+
+  .growth-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.04);
+    border-radius: var(--radius-2xl);
+    padding: 3.5rem;
+  }
+
+  .growth-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+  }
+
+  .growth-btn {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    background: rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 0.5rem 1.2rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .growth-btn:hover {
+    border-color: rgba(255,255,255,0.2);
+    color: var(--text-main);
+  }
+
+  .growth-visual {
+    position: relative;
+    width: 100%;
+    height: 260px;
+  }
+
+  .growth-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(90deg, transparent 0%, transparent calc(100% - 1px), rgba(255,255,255,0.03) calc(100% - 1px));
+    background-size: 25% 100%;
+    border-left: 1px solid rgba(255,255,255,0.04);
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+
+  .growth-grid::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 100% 25%;
+  }
+
+  .growth-svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .growth-line {
+    stroke-dasharray: 800;
+    animation: drawCurve 3s ease-out forwards;
+  }
+
+  @keyframes drawCurve {
+    0% { stroke-dashoffset: 800; }
+    100% { stroke-dashoffset: 0; }
+  }
+
+  .growth-node {
+    animation: pulseNode 3s ease-in-out infinite;
+  }
+
+  .node-1 { animation-delay: 0.5s; }
+  .node-2 { animation-delay: 1s; }
+  .node-3 { animation-delay: 1.5s; }
+  .node-4 { animation-delay: 2s; }
+
+  @keyframes pulseNode {
+    0%, 100% { opacity: 0.6; r: 4; }
+    50% { opacity: 1; r: 6; }
+  }
+
+  .growth-labels {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .growth-label {
+    position: absolute;
+    background: rgba(15, 15, 15, 0.95);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 10px;
+    padding: 0.4rem 0.8rem;
+    white-space: nowrap;
+  }
+
+  .label-1 { bottom: 22%; left: 14%; }
+  .label-2 { bottom: 42%; left: 34%; }
+  .label-3 { bottom: 62%; left: 54%; }
+  .label-4 { bottom: 82%; left: 74%; }
+
+  .gl-label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #ccc;
+    letter-spacing: 0.2px;
+  }
+
+  /* ========== DASHBOARD SHOWCASE ========== */
+  .dashboard-showcase {
+    margin-bottom: 8rem;
+    perspective: 1000px;
+  }
+
+  .dashboard-card {
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    border-color: rgba(255,255,255,0.08);
+    transform: rotateX(2deg);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .dashboard-card:hover {
+    transform: rotateX(0deg) translateY(-4px);
+    border-color: rgba(255,255,255,0.15);
+  }
+
+  .dashboard-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    background: rgba(0,0,0,0.3);
+  }
+
+  .dashboard-dots {
+    display: flex;
+    gap: 6px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  .dot-red { background: #ff5f56; }
+  .dot-yellow { background: #ffbd2e; }
+  .dot-green { background: #27c93f; }
+
+  .dashboard-tabs {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .tab {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .tab.active {
+    color: var(--text-main);
+    background: rgba(255,255,255,0.06);
+  }
+
+  .tab:hover {
+    color: var(--text-main);
+  }
+
+  .dashboard-status {
+    margin-left: auto;
+    font-size: 0.7rem;
+    color: #27c93f;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .dashboard-status::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #27c93f;
+    animation: pulse-dot 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  .dashboard-body {
+    display: flex;
+    min-height: 300px;
+  }
+
+  .dashboard-sidebar {
+    width: 120px;
+    padding: 1rem;
+    border-right: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .sidebar-item {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    padding: 0.5rem;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .sidebar-item.active {
+    color: var(--text-main);
+    background: rgba(51, 133, 255, 0.1);
+    border: 1px solid rgba(51, 133, 255, 0.2);
+  }
+
+  .sidebar-icon {
+    font-size: 0.6rem;
+    color: var(--brand-blue-light);
+  }
+
+  .dashboard-content {
+    flex: 1;
+    padding: 1.2rem;
+  }
+
+  .dash-top-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .dash-metric {
+    flex: 1;
+  }
+
+  .dash-metric-label {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .dash-metric-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+    display: block;
+    margin: 0.2rem 0;
+  }
+
+  .dash-metric-change {
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+
+  .dash-metric-change.up { color: #27c93f; }
+  .dash-metric-change.down { color: #ff5f56; }
+
+  .dash-metric-bar {
+    width: 100%;
+    height: 4px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 2px;
+    margin-top: 0.3rem;
+  }
+
+  .dash-metric-fill {
+    width: 96%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--brand-blue-light), var(--brand-orange-light));
+    border-radius: 2px;
+    animation: fillBar 2s ease-out;
+  }
+
+  @keyframes fillBar {
+    from { width: 0; }
+  }
+
+  .dash-table {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dash-table-row {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    font-size: 0.8rem;
+  }
+
+  .dash-table-row.header {
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .dash-table-row:not(.header) {
+    color: var(--text-main);
+  }
+
+  .status-pill {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 9999px;
+    font-weight: 500;
+  }
+
+  .status-pill.paid { background: rgba(39, 201, 63, 0.1); color: #27c93f; border: 1px solid rgba(39, 201, 63, 0.2); }
+  .status-pill.pending { background: rgba(255, 189, 46, 0.1); color: #ffbd2e; border: 1px solid rgba(255, 189, 46, 0.2); }
+  .status-pill.overdue { background: rgba(255, 95, 86, 0.1); color: #ff5f56; border: 1px solid rgba(255, 95, 86, 0.2); }
+
+  /* ========== BENTO GRID ========== */
+  .bento-section {
+    margin-bottom: 8rem;
+    text-align: center;
+  }
+
+  .section-label {
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 1rem;
+  }
+
+  .section-desc {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 650px;
+    margin: 0 auto 4rem;
+    line-height: 1.7;
+  }
+
+  .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .bento-card {
+    border-radius: var(--radius-xl);
+    padding: 1.8rem;
+    text-align: left;
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .bento-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255,255,255,0.12);
+    box-shadow: 0 16px 60px rgba(0, 0, 0, 0.5);
+  }
+
+  .bento-card-1 { grid-column: 1 / 3; grid-row: 1; }
+  .bento-card-2 { grid-column: 3; grid-row: 1; }
+  .bento-card-3 { grid-column: 1; grid-row: 2; }
+  .bento-card-4 { grid-column: 2 / 4; grid-row: 2; }
+
+  .bento-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(51, 133, 255, 0.08);
+    border: 1px solid rgba(51, 133, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .bento-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+    color: var(--text-main);
+  }
+
+  .bento-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .bento-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .bento-tag {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.7rem;
+    border-radius: 9999px;
+    background: rgba(51, 133, 255, 0.06);
+    border: 1px solid rgba(51, 133, 255, 0.12);
+    color: var(--text-muted);
+  }
+
+  /* AP Flow Visual */
+  .bento-visual {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.04);
+  }
+
+  .ap-flow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .ap-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .ap-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    transition: all 0.3s ease;
+  }
+
+  .ap-node.active .ap-dot {
+    background: var(--brand-blue-light);
+    box-shadow: 0 0 12px rgba(51, 133, 255, 0.4);
+    animation: pulse-dot 2s ease-in-out infinite;
+  }
+
+  .ap-label {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .ap-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+    margin: 0 0.5rem;
+  }
+
+  /* Metrics Visual */
+  .metrics-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .metric-ring {
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+
+  .metric-ring svg {
+    transform: rotate(-90deg);
+  }
+
+  .metric-ring-fill {
+    stroke-dasharray: 264;
+    animation: ringFill 2s ease-out;
+  }
+
+  @keyframes ringFill {
+    from { stroke-dashoffset: 264; }
+  }
+
+  .metric-ring-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .metric-ring-num {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-main);
+  }
+
+  .metric-ring-label {
+    font-size: 0.6rem;
+    color: var(--text-muted);
+    text-align: center;
+    max-width: 70px;
+  }
+
+  .metric-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .metric-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.04);
+  }
+
+  .metric-item-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--brand-orange-light);
+  }
+
+  .metric-item-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+  }
+
+  /* AR Timeline */
+  .ar-timeline {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .ar-event {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.5rem 0.7rem;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.04);
+  }
+
+  .ar-day {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--brand-blue-light);
+    min-width: 35px;
+  }
+
+  .ar-action {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  /* Workflow Visual */
+  .workflow-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.04);
+  }
+
+  .wf-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .wf-node-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    transition: all 0.3s ease;
+  }
+
+  .wf-node.active .wf-node-icon {
+    background: rgba(51, 133, 255, 0.12);
+    border-color: rgba(51, 133, 255, 0.3);
+    color: var(--brand-blue-light);
+    box-shadow: 0 0 20px rgba(51, 133, 255, 0.15);
+  }
+
+  .wf-node-label {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .wf-connector {
+    position: relative;
+    width: 60px;
+    height: 2px;
+  }
+
+  .wf-line {
+    width: 100%;
+    height: 1px;
+    background: rgba(255,255,255,0.08);
+  }
+
+  .wf-particle {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--brand-blue-light);
+    transform: translateY(-50%);
+    animation: flow 2s linear infinite;
+  }
+
+  .wf-particle.delay {
+    animation-delay: 1s;
+  }
+
+  @keyframes flow {
+    0% { left: 0; opacity: 1; }
+    100% { left: 100%; opacity: 0; }
+  }
+
+  /* ========== CTA ========== */
+  .cta-section {
+    margin-bottom: 4rem;
+  }
+
+  .cta-inner {
+    text-align: center;
+    padding: 5rem 2rem;
+    border-radius: var(--radius-2xl);
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.06), rgba(5, 5, 5, 0.8));
+    border-color: rgba(0, 102, 255, 0.15);
+  }
+
+  .cta-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-desc {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 992px) {
+    .hero-title { font-size: 2.8rem; }
+    .hero-stats { flex-direction: column; gap: 1rem; padding: 1.2rem; }
+    .hero-stat-dot { display: none; }
+    .dashboard-sidebar { display: none; }
+    .bento-grid { grid-template-columns: 1fr; }
+    .bento-card-1, .bento-card-2, .bento-card-3, .bento-card-4 { grid-column: 1; grid-row: auto; }
+    .transform-title { font-size: 2.2rem; }
+    .transform-desc { max-width: 100%; }
+    .cta-title { font-size: 2rem; }
+  }
+
+  @media (max-width: 768px) {
+    .hero { padding-top: 140px; padding-bottom: 3rem; min-height: auto; }
+    .hero-title { font-size: 2.2rem; }
+    .section-title { font-size: 2rem; }
+    .dashboard-tabs { display: none; }
+  }
+</style>

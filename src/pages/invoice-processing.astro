@@ -1,0 +1,88 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import GlowBackground from '../components/GlowBackground.astro';
+import Card from '../components/Card.astro';
+import Button from '../components/Button.astro';
+---
+
+<Layout title="Smart Invoice Processing - Finovate.AI">
+  <GlowBackground />
+  <Navbar />
+  
+  <main class="page-container">
+    <section class="container text-center pt-nav">
+      <span class="pill-label">ACCOUNTS PAYABLE</span>
+      <h1 class="page-title">Template-Free <span class="text-gradient">Extraction.</span></h1>
+      <p class="page-subtitle">Process hundreds of complex invoices instantly without setting up rules or templates.</p>
+    </section>
+
+    <section class="container mt-8">
+      <div class="features-grid">
+        <Card>
+          <h3>Vision AI Models</h3>
+          <p>We use state-of-the-art vision models to read invoices like a human does, understanding context even if the layout changes completely.</p>
+        </Card>
+        <Card>
+          <h3>Line Item Extraction</h3>
+          <p>Easily pull complex tables, multiple tax rates, and hundreds of line items into structured data formats instantly.</p>
+        </Card>
+        <Card>
+          <h3>3-Way Matching</h3>
+          <p>Automatically match the extracted invoice data against your Purchase Orders and Goods Receipt Notes in your ERP.</p>
+        </Card>
+      </div>
+    </section>
+
+    <section class="container text-center mb-8">
+      <Card class="cta-card">
+        <h2>Achieve 99%+ Data Accuracy</h2>
+        <p class="mb-4 text-muted">Eliminate manual data entry from your AP workflow.</p>
+        <Button href="/contact" variant="primary">Book a Demo</Button>
+      </Card>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .pt-nav { padding-top: 150px; }
+  .mt-8 { margin-top: 4rem; }
+  .mb-8 { margin-bottom: 8rem; }
+  .mb-4 { margin-bottom: 1.5rem; }
+  .text-center { text-align: center; }
+  
+  .page-title { font-size: 3.5rem; margin-bottom: 1.5rem; }
+  .page-subtitle { font-size: 1.25rem; color: var(--text-muted); max-width: 600px; margin: 0 auto; }
+  .text-muted { color: var(--text-muted); }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, #fff, var(--brand-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .features-grid h3 {
+    margin-bottom: 1rem;
+    color: var(--brand-orange-light);
+  }
+
+  .cta-card {
+    background: linear-gradient(145deg, rgba(20,20,20,0.8), rgba(5,5,5,0.4));
+    border-color: var(--brand-blue);
+    padding: 4rem 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .features-grid { grid-template-columns: 1fr; }
+  }
+</style>

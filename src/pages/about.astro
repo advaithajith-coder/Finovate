@@ -1,0 +1,114 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import GlowBackground from '../components/GlowBackground.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="About Us - Finovate.AI">
+  <GlowBackground />
+  <Navbar />
+  
+  <main class="page-container">
+    <section class="container text-center pt-nav">
+      <span class="pill-label">OUR STORY</span>
+      <h1 class="page-title">We build AI <span class="text-gradient">for Finance.</span></h1>
+      <p class="page-subtitle">Not subscriptions. Not off-the-shelf software. Custom architectures.</p>
+    </section>
+
+    <section class="container mt-8">
+      <div class="about-grid">
+        <div class="about-text">
+          <h2>Our Vision</h2>
+          <p>We saw that modern finance teams were still drowning in manual data entry, late payments, and scattered documents despite spending thousands on SaaS tools. Off-the-shelf solutions rarely fit the nuanced workflows of modern businesses.</p>
+          <p>That's why Finovate.AI was born. We are an AI agency specializing in autonomous finance workflows. We don't just sell software; we diagnose your bottlenecks, build custom AI models, and integrate them seamlessly into your existing stack.</p>
+          <p>Our mission is to help your finance team achieve zero manual noise, so they can focus on strategic growth.</p>
+        </div>
+        <div class="founder-image">
+          <Card class="image-card">
+            <div class="image-placeholder">
+               <span class="placeholder-text">Finovate.AI</span>
+            </div>
+          </Card>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .pt-nav { padding-top: 150px; }
+  .mt-8 { margin-top: 6rem; margin-bottom: 8rem; }
+  .text-center { text-align: center; }
+  
+  .page-title {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, #fff, var(--brand-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .page-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--brand-orange-light);
+  }
+
+  .about-text p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .about-text strong {
+    color: var(--text-main);
+  }
+
+  .image-card {
+    padding: 1rem;
+  }
+
+  .image-placeholder {
+    width: 100%;
+    aspect-ratio: 4/5;
+    background: linear-gradient(145deg, rgba(20,20,20,0.8), rgba(5,5,5,0.4));
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed var(--border-glass);
+  }
+
+  .placeholder-text {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

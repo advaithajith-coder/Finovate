@@ -1,0 +1,88 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import GlowBackground from '../components/GlowBackground.astro';
+import Card from '../components/Card.astro';
+import Button from '../components/Button.astro';
+---
+
+<Layout title="AR Management AI - Finovate.AI">
+  <GlowBackground />
+  <Navbar />
+  
+  <main class="page-container">
+    <section class="container text-center pt-nav">
+      <span class="pill-label">ACCOUNTS RECEIVABLE</span>
+      <h1 class="page-title">Automate your <span class="text-gradient">Cash Flow.</span></h1>
+      <p class="page-subtitle">Smart payment matching, automated follow-ups, and DSO forecasting.</p>
+    </section>
+
+    <section class="container mt-8">
+      <div class="features-grid">
+        <Card>
+          <h3>Automated Follow-ups</h3>
+          <p>Our AI drafts and sends contextual payment reminders based on the client's payment history and relationship, via email or WhatsApp.</p>
+        </Card>
+        <Card>
+          <h3>Smart Reconciliation</h3>
+          <p>Automatically match incoming bank payments to open invoices in your ERP, even when reference numbers are missing.</p>
+        </Card>
+        <Card>
+          <h3>DSO Forecasting</h3>
+          <p>Predict cash inflows based on historical data. Know exactly when you'll get paid, before the month ends.</p>
+        </Card>
+      </div>
+    </section>
+
+    <section class="container text-center mb-8">
+      <Card class="cta-card">
+        <h2>Reduce your DSO by 25%</h2>
+        <p class="mb-4 text-muted">Let's build an AR agent customized for your collections process.</p>
+        <Button href="/contact" variant="primary">Book a Demo</Button>
+      </Card>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .pt-nav { padding-top: 150px; }
+  .mt-8 { margin-top: 4rem; }
+  .mb-8 { margin-bottom: 8rem; }
+  .mb-4 { margin-bottom: 1.5rem; }
+  .text-center { text-align: center; }
+  
+  .page-title { font-size: 3.5rem; margin-bottom: 1.5rem; }
+  .page-subtitle { font-size: 1.25rem; color: var(--text-muted); max-width: 600px; margin: 0 auto; }
+  .text-muted { color: var(--text-muted); }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, #fff, var(--brand-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .features-grid h3 {
+    margin-bottom: 1rem;
+    color: var(--brand-orange-light);
+  }
+
+  .cta-card {
+    background: linear-gradient(145deg, rgba(20,20,20,0.8), rgba(5,5,5,0.4));
+    border-color: var(--brand-blue);
+    padding: 4rem 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .features-grid { grid-template-columns: 1fr; }
+  }
+</style>

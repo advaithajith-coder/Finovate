@@ -1,0 +1,61 @@
+---
+---
+
+<div class="glow-bg">
+  <div class="beam beam-blue"></div>
+  <div class="beam beam-orange"></div>
+  <div class="grid-overlay"></div>
+</div>
+
+<style>
+  .glow-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    background-color: var(--bg-dark);
+    pointer-events: none;
+  }
+
+  .beam {
+    position: absolute;
+    width: 200%;
+    height: 120px;
+    top: 50%;
+    left: -50%;
+    transform-origin: center;
+    filter: blur(40px);
+    opacity: 0.5;
+  }
+
+  .beam-blue {
+    background: linear-gradient(90deg, transparent, var(--brand-blue-light), var(--brand-blue), transparent);
+    transform: rotate(-35deg) translateY(-200px);
+    animation: pulse-beam 8s infinite alternate ease-in-out;
+  }
+
+  .beam-orange {
+    background: linear-gradient(90deg, transparent, var(--brand-orange), var(--brand-orange-light), transparent);
+    transform: rotate(-35deg) translateY(200px);
+    height: 80px;
+    opacity: 0.4;
+    animation: pulse-beam 10s infinite alternate-reverse ease-in-out;
+  }
+
+  .grid-overlay {
+    position: absolute;
+    inset: 0;
+    background-image: 
+      linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  @keyframes pulse-beam {
+    0% { opacity: 0.3; filter: blur(50px); }
+    100% { opacity: 0.6; filter: blur(30px); }
+  }
+</style>

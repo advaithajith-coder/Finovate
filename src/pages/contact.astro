@@ -1,0 +1,129 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import GlowBackground from '../components/GlowBackground.astro';
+import Card from '../components/Card.astro';
+import Button from '../components/Button.astro';
+---
+
+<Layout title="Contact Us - Finovate.AI">
+  <GlowBackground />
+  <Navbar />
+  
+  <main class="page-container">
+    <section class="container text-center pt-nav">
+      <span class="pill-label">GET IN TOUCH</span>
+      <h1 class="page-title">Ready to Automate?</h1>
+      <p class="page-subtitle">Book a free audit or send us a message on WhatsApp.</p>
+    </section>
+
+    <section class="container mt-8">
+      <div class="contact-grid">
+        <Card class="contact-form-card">
+          <h2>Send a Message</h2>
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="John Doe" />
+            </div>
+            <div class="form-group">
+              <label for="email">Work Email</label>
+              <input type="email" id="email" placeholder="john@company.com" />
+            </div>
+            <div class="form-group">
+              <label for="message">How can we help?</label>
+              <textarea id="message" rows="4" placeholder="Tell us about your finance workflows..."></textarea>
+            </div>
+            <Button variant="primary" class="w-full">Submit Request</Button>
+          </form>
+        </Card>
+
+        <div class="contact-info">
+          <Card class="info-card">
+            <h3>WhatsApp Us</h3>
+            <p>Get instant answers from our team.</p>
+            <Button variant="outline" href="https://wa.me/your-number-here" class="mt-4">Chat on WhatsApp</Button>
+          </Card>
+          
+          <Card class="info-card mt-4">
+            <h3>Email Us</h3>
+            <p>Prefer email? Drop us a line anytime.</p>
+            <a href="mailto:hello@finvera.ai" class="text-teal d-block mt-2">hello@finvera.ai</a>
+          </Card>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .pt-nav { padding-top: 150px; }
+  .mt-8 { margin-top: 4rem; margin-bottom: 8rem; }
+  .mt-4 { margin-top: 1.5rem; }
+  .text-center { text-align: center; }
+  .w-full { width: 100%; }
+  .d-block { display: block; }
+  
+  .page-title { font-size: 3.5rem; margin-bottom: 1.5rem; }
+  .page-subtitle { font-size: 1.25rem; color: var(--text-muted); max-width: 600px; margin: 0 auto; }
+  .text-teal { color: var(--brand-orange-light); }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .contact-form-card h2 {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid var(--border-glass);
+    border-radius: 8px;
+    color: var(--text-main);
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--brand-blue);
+  }
+
+  .info-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .info-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 768px) {
+    .contact-grid { grid-template-columns: 1fr; }
+  }
+</style>
