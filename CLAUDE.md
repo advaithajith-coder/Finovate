@@ -16,7 +16,7 @@ Note: `README.md` is still the default Astro starter text and does not describe 
 ```bash
 npm install
 npm run dev          # http://localhost:4321
-npm run build        # must succeed before committing (Vercel runs this; output in dist/)
+npm run build        # must succeed before committing (CI and Vercel run this; output in dist/)
 npx astro check      # type-check .astro files
 ```
 
